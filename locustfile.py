@@ -21,6 +21,7 @@ class WebTasks(TaskSet):
         self.client.get("/detail.html?id={}".format(item_id))
         self.client.delete("/cart")
         self.client.post("/cart", json={"id": item_id, "quantity": 1})
+        self.client.post("/orders")
         self.client.get("/basket.html")
         self.client.get("/orders")
 
