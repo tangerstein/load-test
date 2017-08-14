@@ -23,6 +23,7 @@ class WebTasks(TaskSet):
         self.client.post("/cart", json={"id": item_id, "quantity": 1})
         self.client.get("/basket.html")
         self.client.post("/orders")
+	self.client.get("/customer-orders.html")
 
 
 class Web(HttpLocust):
